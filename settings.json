@@ -1,0 +1,82 @@
+{
+    // General Editor Settings
+    "editor.renderWhitespace": "all",             // Show spaces, tabs, etc.
+    "editor.renderControlCharacters": true,      // Show control characters
+    "editor.renderLineHighlight": "all",         // Highlight the current line
+     "editor.minimap.enabled": true,              // Enable minimap for file overview
+    "editor.lineNumbers": "on",                  // Show line numbers
+    "editor.glyphMargin": true,                  // Enable gutter margin for glyphs/icons
+    "editor.scrollBeyondLastLine": true,        // Allow scrolling beyond the last line
+    "editor.cursorBlinking": "smooth",          // Smooth blinking cursor
+    "editor.wordWrap": "off",                   // Disable word wrap
+  
+    // File Associations
+    "files.associations": {
+      "*.lean": "lean4"                         // Associate .lean files with Lean 4
+    },
+  
+    // Enable Lean 4 Gutter Icons and Server
+    "lean4.enableDiagnostics": true,            // Enable diagnostics to show checkmarks, Xs, spinners
+    "lean4.runElan": true,                      // Use Elan to manage Lean versions
+    "lean4.trace.server": "messages",          // Show Lean server messages in the output console
+    "lean4.progressMessages": true,            // Show progress messages while Lean builds
+    "lean4.serverPath": "",                    // Auto-detect the server path (default)
+    "lean4.serverLogging": "verbose",          // Verbose server logs for debugging issues
+    "lean4.autoActivate": true,                // Automatically activate the Lean server
+    "lean4.toolchainPath": ""  ,               // Leave this blank unless using a custom Lean version
+  
+    // General Lean Configuration
+    "lean.enableDiagnostics": true,            // Enable gutter diagnostics for Lean
+    "lean.gutterIcons": true,                  // Enable checkmarks, errors, and spinners in the gutter
+    "lean.infoView.autoOpen": true,            // Auto-open the Lean Info View
+    "lean.infoView.allErrorsOnLine": true,     // Show all errors on the same line
+    "lean.infoViewDelay": 500,                 // Delay before Info View updates
+    "lean.typeCheckingMode": "background",    // Run Lean server in the background
+    "lean.showProcessingProgress": true,      // Show progress in the bottom-left (Lean server ready)
+    "lean.trace.server": "off",               // Set to "messages" to see debug logs
+    "lean.enableWidgetView": true,            // Enable widgets in Info View (like goal display)
+  
+    // Line Gutter Visibility (Icons and Decorators)
+    "editor.gutter": true,                     // Ensure gutter (left margin) is enabled
+    "editor.showDecorations": true,            // Show checkmarks and decorations
+    "editor.codeLens": true,                   // Show inline annotations for Lean goals
+    "editor.renderLineDecorations": true,      // Ensure Lean icons show up in the gutter
+  
+    // Performance Settings
+    "editor.largeFileOptimizations": true,    // Optimize performance for large files
+    "files.autoSave": "afterDelay",           // Auto-save files to ensure Lean sees the changes
+    "files.autoSaveDelay": 1000,              // Auto-save delay (ms)
+    "files.exclude": {
+      "**/.git": true,                        // Hide .git folders
+      "**/.DS_Store": true,                   // Hide macOS system files
+      "**/node_modules": true,                // Hide node_modules from the file explorer
+      "**/.lake/": true,                      // Hide the Lake cache folder
+      "**/.lean/": true                       // Hide Lean's cache
+    },
+  
+    // View & Interface Customization
+    "workbench.colorTheme": "Default Dark+",  // Change color theme (optional)
+    "workbench.startupEditor": "none",        // Don't show "Welcome" page at startup
+    "workbench.editor.enablePreview": false, // Disable preview mode for opened files
+    "window.zoomLevel": 0,                    // Default zoom level
+    "explorer.confirmDelete": false,         // No confirmation on file delete (optional)
+    "explorer.compactFolders": false,        // Show full folder structure
+  
+    // Terminal Customization
+    "terminal.integrated.fontSize": 14,      // Font size for the integrated terminal
+    "terminal.integrated.cursorBlinking": true, // Blinking cursor in terminal
+  
+    // Debug Settings
+    "debug.inlineValues": true,              // Show inline debug values
+    "debug.toolBarLocation": "docked",       // Keep debug toolbar in a fixed location
+  
+    // Optional Settings (Useful for debugging Lean)
+    "editor.tokenColorCustomizations": {
+      "comments": "#6a9955"                   // Custom color for comments (optional)
+    },
+    "workbench.activityBar.visible": true,   // Show the activity bar (side panel)
+    "workbench.statusBar.visible": true,     // Show status bar at bottom
+    "window.menuBarVisibility": "toggle",    // Toggle menu bar visibility
+    "window.titleBarStyle": "custom"         // Custom title bar style for a clean UI
+  }
+  

@@ -1,0 +1,13 @@
+name = "pinions"
+version = "0.1.0"
+defaultTargets = ["pinions"]
+dependencies = [
+  { name = "mathlib", src = "leanprover-community/mathlib4" }
+]
+
+[[lean_lib]]
+name = "Pinions"
+
+[[lean_exe]]
+name = "pinions"
+root = "Main"
