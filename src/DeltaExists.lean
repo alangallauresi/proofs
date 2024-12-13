@@ -28,3 +28,10 @@ theorem difference_implies_existence { α : Type } :
     obtain ⟨x, y, hxy⟩ := h_diff
     exists x
     constructor
+
+    /-- Test case for Bool type difference and existence -/
+def bool_test : Bool := true
+#eval bool_test
+/-- Test case for Natural number type difference and existence -/
+def nat_test : Nat := 5
+#eval nat_test
