@@ -5,10 +5,11 @@
 -/
 
 /--
- **Axiom (Difference Axiom):**
- There exist two distinct objects x and y such that x ≠ y.
+ **Definition: Nontrivial Type**
+ A type is nontrivial if it has at least two distinct elements.
 -/
-axiom experiential_difference { α : Type } : ∃ (x y : α), x ≠ y
+def Nontrivial (α : Type) : Prop :=
+ ∃ (x y : α), x ≠ y
 
 /--
  **Definition of MyExists (E):**
@@ -20,7 +21,6 @@ inductive MyExists { α : Type } (z : α) : Prop
 /--
  **Theorem (Difference Implies Existence):**
  If there exist x and y such that x ≠ y, then there exists a z such that E(z) holds.
- That is, at least one of x or y must exist in some form.
 -/
 theorem difference_implies_existence { α : Type } :
  ( ∃ (x y : α), x ≠ y ) → ∃ (z : α), MyExists z := by
@@ -31,37 +31,35 @@ theorem difference_implies_existence { α : Type } :
 
 /--
  **Theorem (Existence Implies Difference):**
- If there exists a z such that E(z) holds, then there exist x and y such that x ≠ y.
+ If a type is nontrivial and something exists in it, then difference exists in that type.
 -/
-theorem existence_implies_difference { α : Type } :
+theorem existence_implies_difference { α : Type } (h_nontriv : Nontrivial α) :
  ( ∃ (z : α), MyExists z ) → ∃ (x y : α), x ≠ y := by
-   intro h_existence
-   obtain ⟨z, hz⟩ := h_existence
-   exact experiential_difference
+   intro _
+   exact h_nontriv
 
 /--
  **Theorem (Difference is Existence):**
- Difference and existence are equivalent.
+ For nontrivial types, difference and existence are equivalent.
 -/
-theorem difference_is_existence { α : Type } :
+theorem difference_is_existence { α : Type } (h_nontriv : Nontrivial α) :
  ( ∃ (x y : α), x ≠ y ) ↔ ( ∃ (z : α), MyExists z ) := by
    constructor
-   · intro h_diff
-     exact difference_implies_existence h_diff
-   · intro h_existence
-     exact existence_implies_difference h_existence
+   · exact difference_implies_existence
+   · exact existence_implies_difference h_nontriv
 
-/-- Verification examples -/
-example : 0 ≠ (1 : Nat) := by simp
-example : true ≠ false := by simp
-example : "a" ≠ "b" := by simp
+/-- Proof that Bool is nontrivial -/
+theorem bool_nontrivial : Nontrivial Bool := 
+ ⟨true, false, fun h => nomatch h⟩
 
-/-- Computational tests -/
-def check_difference_nat (x y : Nat) : Bool := x ≠ y
-#eval check_difference_nat 0 1  -- Returns true (confirming difference exists)
+/-- Proof that Nat is nontrivial -/
+theorem nat_nontrivial : Nontrivial Nat := 
+ ⟨0, 1, fun h => nomatch h⟩
 
-def check_difference_bool (x y : Bool) : Bool := x ≠ y
-#eval check_difference_bool true false  -- Returns true (confirming difference exists)
+/-- Proof that String is nontrivial -/
+theorem string_nontrivial : Nontrivial String := 
+ ⟨"a", "b", fun h => nomatch h⟩
 
-def check_difference_string (x y : String) : Bool := x ≠ y
-#eval check_difference_string "a" "b"  -- Returns true (confirming difference exists)
+/-- Basic tests -/
+def check_difference (x y : Nat) : Bool := x ≠ y
+#eval check_difference 0 1
