@@ -1,4 +1,12 @@
+—
+layout: default
+—
+
 # **Difference = Existence (D = E) and Pinion Logic**
+
+<script type=“text/javascript” async 
+  src=“https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML”>
+</script>
 
 —
 
@@ -59,44 +67,6 @@ The Pinion Engine models recursive generation of difference. It functions like a
 
 —
 
-### **Key Properties of the Pinion Engine**
-We propose that any engine of difference capable of recursively generating existence must have the following critical properties:  
-
-#### **1. Geosodicity (Exhaustive Exploration of Possibility Space)**
-- **Definition**: The Pinion Engine must traverse all of possibility space.  
-- **Why it’s necessary**: If existence is recursively generated, then the Pinion must traverse all possible states.  
-- **Why we think it can be proven**: **Binary search trees (BSTs)** and **fractals** exhibit geosodic-like traversal.  
-
-—
-
-#### **2. Tolerance (Small Errors Do Not Collapse the System)**
-- **Definition**: Small differences or perturbations do not cause collapse.  
-- **Why it’s necessary**: If recursion is sensitive to small changes, then error propagation would collapse the system.  
-- **Why we think it can be proven**: Fractals and DAGs exhibit tolerance. Recursive functions in computation show stability even under minor perturbations.  
-
-—
-
-#### **3. Inclusiveness (Contains the Maximum of What is Possible)**
-- **Definition**: The Pinion Engine must generate all possible states.  
-- **Why it’s necessary**: If existence is difference, then **all possible differences must be reachable**.  
-- **Why we think it can be proven**: BSTs, fractals, and DAGs generate **all paths at each level**, which naturally implies inclusiveness.  
-
-—
-
-#### **4. Recursion (The Pinion Calls Itself at Every Turn)**
-- **Definition**: The Pinion Engine must be recursive, calling itself at each step.  
-- **Why it’s necessary**: If existence is recursive, the Pinion must be **self-replicating**.  
-- **Why we think it can be proven**: This is a standard property of recursive functions, DAGs, and fractals.  
-
-—
-
-#### **5. Self-Containment (The Pinion Contains Itself)**
-- **Definition**: The Pinion Engine must contain its own structure as part of itself.  
-- **Why it’s necessary**: If the Pinion “generates existence,” it must contain **all of its own recursive steps**.  
-- **Why we think it can be proven**: Gödel’s incompleteness theorem implies that self-containment is necessary for recursion.  
-
-—
-
 ## **4. Key Formal Proofs of Pinion Logic**
 
 —
@@ -105,7 +75,7 @@ We propose that any engine of difference capable of recursively generating exist
 \[
 (\exists x, y \in \alpha \quad x \neq y) \implies (\exists z \in \alpha \quad \text{MyExists}(z))
 \]
-If difference exists, then at least one \(z\) exists in \(\alpha\).  
+If difference exists, then at least one \( z \) exists in \( \alpha \).  
 
 —
 
