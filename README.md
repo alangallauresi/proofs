@@ -47,46 +47,63 @@ The Pinion Engine models recursive generation of difference. It functions like a
 We propose that any engine of difference capable of recursively generating existence must have the following critical properties:  
 
 #### **1. Geosodicity (Exhaustive Exploration of Possibility Space)**
-- **Definition**: The Pinion Engine must traverse all of possibility space.  
-- **Why it’s necessary**: If existence is recursively generated, then the Pinion must traverse all possible states.  
-- **Why we think it can be proven**: **Binary search trees (BSTs)** and **fractals** exhibit geosodic-like traversal.  
+The Pinion must traverse all of possibility space.
 
 #### **2. Tolerance (Small Errors Do Not Collapse the System)**
-- **Definition**: Small differences or perturbations do not cause collapse.  
-- **Why it’s necessary**: If recursion is sensitive to small changes, then error propagation would collapse the system.  
-- **Why we think it can be proven**: Fractals and DAGs exhibit tolerance. Recursive functions in computation show stability even under minor perturbations.  
+Small differences or perturbations do not cause collapse.
 
 #### **3. Inclusiveness (Contains the Maximum of What is Possible)**
-- **Definition**: The Pinion Engine must generate all possible states.  
-- **Why it’s necessary**: If existence is difference, then **all possible differences must be reachable**.  
-- **Why we think it can be proven**: BSTs, fractals, and DAGs generate **all paths at each level**, which naturally implies inclusiveness.  
+The Pinion Engine must generate all possible states.
 
 #### **4. Recursion (The Pinion Calls Itself at Every Turn)**
-- **Definition**: The Pinion Engine must be recursive, calling itself at each step.  
-- **Why it’s necessary**: If existence is recursive, the Pinion must be **self-replicating**.  
-- **Why we think it can be proven**: This is a standard property of recursive functions, DAGs, and fractals.  
+The Pinion Engine must be recursive, calling itself at each step.
 
 #### **5. Self-Containment (The Pinion Contains Itself)**
-- **Definition**: The Pinion Engine must contain its own structure as part of itself.  
-- **Why it’s necessary**: If the Pinion “generates existence,” it must contain **all of its own recursive steps**.  
-- **Why we think it can be proven**: Gödel’s incompleteness theorem implies that self-containment is necessary for recursion.  
+The Pinion Engine must contain its own structure as part of itself.
 
 ## **4. Key Formal Proofs of Pinion Logic**
 
 ### **Theorem 1: Difference Implies Existence**
-$(\exists x, y \in \alpha \quad x \neq y) \implies (\exists z \in \alpha \quad \text{MyExists}(z))$
-
+**What are we trying to prove?**  
 If difference exists, then at least one $z$ exists in $\alpha$.  
 
-### **Theorem 2: Existence Implies Difference**
-$(\text{Nontrivial}(\alpha)) \implies (\exists z \in \alpha \quad \text{MyExists}(z)) \implies (\exists x, y \in \alpha \quad x \neq y)$
+**Statement**  
+$$(\exists x, y \in \alpha \quad x \neq y) \implies (\exists z \in \alpha \quad \text{MyExists}(z))$$
 
+**Proof**  
+1. Assume $\exists x, y \in \alpha$ such that $x \neq y$.  
+2. Let $x$ be an element of $\alpha$.  
+3. By definition, $\text{MyExists}(x)$ holds.  
+4. Therefore, $\exists z \in \alpha$ such that $\text{MyExists}(z)$ holds.  
+
+—
+
+### **Theorem 2: Existence Implies Difference**
+**What are we trying to prove?**  
 If something exists in a nontrivial type, then difference exists.  
 
-### **Theorem 3: Difference is Existence**
-$(\exists x, y \in \alpha \quad x \neq y) \iff (\exists z \in \alpha \quad \text{MyExists}(z))$
+**Statement**  
+$$(\text{Nontrivial}(\alpha)) \implies (\exists z \in \alpha \quad \text{MyExists}(z)) \implies (\exists x, y \in \alpha \quad x \neq y)$$
 
+**Proof**  
+1. Assume $\text{Nontrivial}(\alpha)$, so $\exists x, y \in \alpha$ such that $x \neq y$.  
+2. Assume $\exists z \in \alpha$ such that $\text{MyExists}(z)$.  
+3. By the non-triviality of $\alpha$, there exist distinct elements $x$ and $y$ in $\alpha$.  
+4. Therefore, $\exists x, y \in \alpha$ such that $x \neq y$.  
+
+—
+
+### **Theorem 3: Difference is Existence**
+**What are we trying to prove?**  
 Difference and existence are logically equivalent.  
+
+**Statement**  
+$$(\exists x, y \in \alpha \quad x \neq y) \iff (\exists z \in \alpha \quad \text{MyExists}(z))$$
+
+**Proof**  
+1. From Theorem 1, we have that $(\exists x, y \in \alpha \quad x \neq y) \implies (\exists z \in \alpha \quad \text{MyExists}(z))$.  
+2. From Theorem 2, we have that $(\exists z \in \alpha \quad \text{MyExists}(z)) \implies (\exists x, y \in \alpha \quad x \neq y)$.  
+3. By bi-implication, we have the equivalence.  
 
 ## **5. Reasonable Implications of Difference = Existence**
 
